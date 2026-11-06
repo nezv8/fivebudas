@@ -4,22 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#08090d" />
-  <meta name="description" content="Mô phỏng 3D vũ trụ COSMOLOGICAL WORLD TREE" />
+  <meta name="description" content="Mô phỏng 3D Cosmological World Tree" />
   <title>Five Buddha Mandala</title>
 </head>
 <body>
   <div id="app">
     <header class="topbar">
-      <div class="brand"><span class="brand-mark">✥</span><div><b>Five Buddha Mandala</b><small>CRUZ NAWATL / COSMIC CROSS 3D</small></div></div>
+      <div class="brand"><span class="brand-mark">✥</span><div><b>CFive Buddha Mandala</b><small>Cosmological World Tree</small></div></div>
       <div class="top-meta"><span class="live-dot"></span> MÔ PHỎNG VŨ TRỤ 4 PHƯƠNG <span class="sep">/</span> WEBGL</div>
     </header>
     <main class="workspace">
       <section class="viewport-wrap">
-        <div class="scene-label"><span>01 / THẬP TỰ VŨ TRỤ</span><span id="sceneMode">BỐN PHƯƠNG · TÂM THIÊNG · CHU KỲ THỜI GIAN</span></div>
+        <div class="scene-label"><span>Cosmological World Tree</span><span id="sceneMode">BỐN PHƯƠNG · TÂM THIÊNG · CHU KỲ THỜI GIAN</span></div>
         <div id="viewport">
-          <div class="loading" id="loading">ĐANG DỰNG KHÔNG GIAN FIVE BUDDHA MANDALA…</div>
+          <div class="loading" id="loading">ĐANG DỰNG KHÔNG GIAN…</div>
           <canvas id="fxCanvas"></canvas>
         </div>
+        <div hidden aria-hidden="true" id="focusCard" aria-live="polite">
+          <span class="focus-kicker" id="focusKicker">CẤU TRÚC VŨ TRỤ · 01</span>
+          <b id="focusTitle">Tâm thiêng và bốn phương</b>
+          <p id="focusDescription">Một tâm điểm được bao quanh bởi bốn miền phương hướng; các vòng lịch pháp biểu thị nhịp tuần hoàn của thời gian.</p>
+        </div>
+        <div class="hud hud-left"><span>CƯỜNG ĐỘ HIỂN THỊ</span><b id="energyReadout">78.4%</b><div class="meter"><i></i></div><small>TRƯỜNG ÁNH SÁNG MÔ PHỎNG</small></div>
+        <div class="hud hud-right"><span>GÓC QUAN SÁT</span><b id="cameraReadout">QUỸ ĐẠO / 000°</b><small>KÉO ĐỂ XOAY · CUỘN ĐỂ PHÓNG TO</small></div>
+        <div class="bottom-controls">
+          <button id="autoRotate" class="control active" aria-pressed="true"><span>⟳</span> TỰ XOAY</button>
+          <button id="resetCamera" class="control"><span>⌖</span> ĐẶT LẠI GÓC NHÌN</button>
+          <button id="toggleLabels" class="control active" aria-pressed="true"><span>⌗</span> NHÃN 3D</button>
+          <span class="control-spacer"></span><span class="fps" id="fps">60 FPS</span>
+        </div>
+      </section>
+      <aside class="sidebar">
+        <div class="panel-heading"><div><span class="eyebrow">BẢNG ĐIỀU KHIỂN / 01</span><h1>Thập tự vũ trụ</h1></div><span class="status-pill">3D LIVE</span></div>
+        <p class="intro">Khám phá bản đồ không gian bốn phương, tâm thế giới, chu kỳ lịch pháp và những lớp diễn giải hiện đại ngay trong khung 3D.</p>
+
         <section class="music-card" aria-label="Trình phát nhạc nền">
           <div class="music-head"><div><span class="music-kicker">ÂM THANH KHÔNG GIAN</span><b id="musicTrackTitle">Chưa có bản nhạc trong thư viện</b></div><span class="music-status" id="musicStatus">SẴN SÀNG</span></div>
           <div class="music-controls">
@@ -54,9 +72,10 @@
           <label class="toggle"><span><b>Lớp toàn ảnh</b><small>Các mặt phẳng và điểm sáng lồng nhau</small></span><input type="checkbox" id="holoLayer" checked><i></i></label>
         </div>
         <div class="palette-row"><span>BẢNG MÀU TRƯỜNG</span><div class="swatches"><button class="swatch active" data-palette="gold" title="Vàng đá hắc diện" aria-label="Vàng đá hắc diện"></button><button class="swatch teal" data-palette="jade" title="Ngọc bích và lam ngọc" aria-label="Ngọc bích và lam ngọc"></button><button class="swatch violet" data-palette="violet" title="Tím vũ trụ" aria-label="Tím vũ trụ"></button></div></div>
+        <div class="panel-footer"><span>DIỄN GIẢI 3D LẤY CẢM HỨNG TỪ CODEX</span><span>v1.4.0</span></div>
       </aside>
     </main>
-    <footer class="footer"><span>FIVE BUDDHA MANDALA — THỜI GIAN & KHÔNG GIAN</span></footer>
+    <footer class="footer"><span>MESOAMERICA — THỜI GIAN & KHÔNG GIAN</span><span><b>×</b>VŨ TRỤ HỌC</span></footer>
   </div>
   <script type="module" src="/src/main.js"></script>
 </body>
